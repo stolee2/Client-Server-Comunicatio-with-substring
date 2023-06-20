@@ -1,0 +1,57 @@
+# Client-Server-Comunicatio-with-substring
+Checking if the strings are under message strings, if the string is genuine. It is written in c++ programming language
+#STEPS
+#1.Install g++ compiler in you linux machine 
+#2.Put the files Client.cpp and Server.cpp on dekstop
+#3.Open two terminals 
+4.First Terpinal type This 
+cd Desktop
+g++ Server.cpp
+./a.out 53455
+5.In the other Terminal type this
+cd Desktop
+g++ Client.cpp
+./a.out localhost 53455
+acba/acb/aaaa
+abcd/ab/abcdf
+ppap/pd/pdf
+123/1234/111
+
+
+this is the Requeriment for SERVER
+Server:
+- On the server side, it should first be checked if the number is correct
+arguments that the user passes through a terminal at runtime.
+- Server side buffer size should be 300 characters
+- When setting the server address, you need to convert it from
+host byte order in network byte order. In addition, a wildcard should be used.
+- The server listens for connection requests on port 54355.
+- The maximum number of requests for establishing a connection should be 3.
+- In case of failed connection acceptance to print an error message
+"There was an error connecting the connection. Obidete se povtorno!”
+- After successful execution of the program on the server to print a message "Ocekuvam
+requirements for establishing a connection on the part of the client".
+- The server receives the message from the client and prints it on the screen.
+- If the content of the message is "end", in that case the connection is terminated and
+the message "Kraj na sesija" is printed.
+- If everything is in order, the message sent by the client is separated
+(message is in OriginalenString/Podstring/DrugOriginalenString format). The server
+it needs to determine if the string in the middle is a substring of the other two strings
+(OriginalenString and DrugOriginalenString)
+- If it is a substring of both strings, in that case it sends a message to the client
+"Podstring2", if it is a substring only on OriginalenString sends a message
+"PodstringOriginalen" and if it is a substring only the DrugOriginalenString sends
+message "PodstringDrug"
+- Communication between the client and the server takes place continuously by
+first the client sends a message and then the server responds.
+
+Requeriment for Client 
+
+- On the client's side, it should first be checked whether the number is correct
+arguments that the user passes through a terminal at runtime.
+- After establishing a connection with the server, a message with content should be printed
+"Successfully established connection with the server".
+- The message that the client enters through the keyboard should be in the next one
+format: OriginalenString/Podstring/DrugOriginalenString . If it consists only
+from numbers to print a message to the client "Ve molime vnesete nova poraka"
+- If everything is fine, the message is sent to the server.
